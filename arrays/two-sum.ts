@@ -92,6 +92,7 @@ const twoSumWithMap = (arr: number[], target: number): number[] => {
 }
 const twoSum = (arr: number[], target: number): number[] => {
   const map: { [k: number]: number } = {}
+
   for (let i = 0; i < arr.length; i++) {
     const k = target - arr[i];
     if (map[k]) {

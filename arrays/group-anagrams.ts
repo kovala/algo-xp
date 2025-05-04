@@ -18,6 +18,8 @@ const groupAnagramsNaive = (arr: string[]) => {
   return [...m.values()]
 }
 
+// create unified key
+// {k: "10100000000000000001000000",}
 const asKeySmart = (str: string) => {
   const count = new Array(26).fill(0);
   for (let c of str) {
@@ -29,7 +31,7 @@ const groupAnagramsOptimal = (arr: string[]) => {
   let m = new Map<string, string[]>
   for (let a of arr) {
     const k = asKeySmart(a)
-    // console.log({k})
+    console.log({k})
 
     if (m.has(k)) {
       m.get(k).push(a)
@@ -39,6 +41,10 @@ const groupAnagramsOptimal = (arr: string[]) => {
   }
   return [...m.values()]
 }
+test("text key function", () => {
+  console.log(['cat', asKeySmart('cat')])
+  console.log(['tac', asKeySmart('tac')])
+})
 
 test("group anagrams naive", () => {
   const expected = [["hat"],["act", "cat"],["stop", "pots", "tops"]]
