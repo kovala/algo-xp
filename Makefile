@@ -1,4 +1,5 @@
-cm:=/home/azz/tools/clion/bin/cmake/linux/x64/bin/cmake
+#cm:=/home/azz/tools/clion/bin/cmake/linux/x64/bin/cmake
+cm:=cmake
 ninja:=/home/azz/tools/clion/bin/ninja/linux/x64/ninja
 
 cmp-group-anagrams:

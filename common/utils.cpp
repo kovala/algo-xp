@@ -3,6 +3,12 @@
 #include <queue>
 #include <random>
 
+#if defined(__APPLE__)
+void u::jlog(json j) {
+  std::cout << j << std::endl;
+}
+#endif
+
 namespace utils {
   int rndNum(int min, int max) {
     static std::mt19937 gen(std::random_device{}());
