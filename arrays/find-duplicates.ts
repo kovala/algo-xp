@@ -28,7 +28,7 @@ const findDuplicates = (arr: number[]) => {
     // elmem to index
     const j = nn - 1;
 
-    // marked
+    // marked - potentially could use bitmask
     if (nums[j] < 0)
       result.push(nn);
     else
